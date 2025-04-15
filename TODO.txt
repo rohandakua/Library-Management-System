@@ -1,0 +1,24 @@
+api endpoints to have
+
+/api/v1 is the base api
+
+/user/login                                          get
+/user/books?offset={}&limit={}                       get
+/user/{genre}/books?offset={}&limit={}               get
+/user/issue?bookId={}&userId={}                      get
+/user/return?bookId={}&userId={}                     get
+/user/return/fine?bookId={}&userId={}                get
+/user/logout                                         get
+/user/dashboard                                      get
+
+
+
+/admin/login                                         get
+/admin/logout                                        get
+/admin/dashboard                                     get
+/admin/query?userId={}                               get
+/admin/query?userId={}&bookId={}                     get
+/admin/entry                                         post
+/admin/delete?bookId={}                              delete
+/admin/update?bookId={}                              put
+/admin/update?bookId={}&userId={}                    put         // this is to accept that the fine has been received

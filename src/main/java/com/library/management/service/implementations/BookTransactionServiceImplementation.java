@@ -65,7 +65,6 @@ public class BookTransactionServiceImplementation implements BookTransactionServ
         Transaction transaction = optionalTransaction.get();
         transaction.setReturned_at(new Timestamp(System.currentTimeMillis()));
 
-        // Set book copy as available again
         BookAvailableId bookAvailableId = new BookAvailableId(bookIdFB, transaction.getId().getCopy_no());
         Optional<BookAvailable> optionalAvailable = bookAvailableRepository.findById(bookAvailableId);
 

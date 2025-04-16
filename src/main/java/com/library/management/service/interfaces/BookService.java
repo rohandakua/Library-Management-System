@@ -10,4 +10,6 @@ public interface BookService {
     public Book getBookById(long bookIdFB);
     public boolean deleteBookById(long bookIdFB);
     public boolean updateBook(Book book,long bookIdFB);
+    public boolean addBook(Book book);
+
 }

@@ -8,33 +8,22 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "users")
+@Table(name = "user")
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(nullable = false, unique = true)
-    private String userId;
-
-    @Column(nullable = false)
-    private String password;
-
-    @Column(nullable = false)
-    private String role; // USER or LIBRARIAN
-
-    @Column(nullable = false)
-    private String firstName;
+    @NonNull
+    private long user_id;
 
     @Column
-    private String middleName;
+    private String fn;
+    @Column
+    private String mn;
+    @Column
+    private String ln;
 
-    @Column(nullable = false)
-    private String lastName;
+    @Column
+    private String password;
 
-    @Column(nullable = false, unique = true)
-    private String email;
-
-    @Column(nullable = false)
-    private String phoneNumber;
 }
